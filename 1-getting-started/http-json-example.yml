@@ -1,0 +1,20 @@
+---
+integrations:
+  - name: nri-flex
+    interval: 30s
+    config:
+      name: todos
+      apis:
+        - name: todos
+          event_type: Lab1Example1
+          url: https://jsonplaceholder.typicode.com/todos/1
+
+          # custom_attributes:
+          #   LOCATION: sydney
+          #   TIME: ${timestamp:s}
+
+          # add_attribute:
+          #   link: https://some-other-service/nodes/${id}
+
+          # value_parser:
+          #   id: "[0-9]+"

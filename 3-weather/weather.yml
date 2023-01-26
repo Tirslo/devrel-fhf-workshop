@@ -1,0 +1,14 @@
+---
+integrations:
+  - name: nri-flex
+    interval: 30s
+    config:
+      name: weather
+      variable_store:
+        long: 13.41
+        lat: 52.52
+      global: 
+        base_url: https://api.open-meteo.com/v1/forecast?
+      apis:
+        - event_type: WeatherLocationExample
+          url: latitude=${var:lat}&longitude=${var:long}&current_weather=true
