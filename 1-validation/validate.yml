@@ -1,0 +1,10 @@
+---
+integrations:
+  - name: nri-flex
+    interval: 30s
+    config:
+      name: todos
+      apis:
+        - name: toDoSample
+          event_type: Lab1Example2
+          url: https://jsonplaceholder.typicode.com/todos

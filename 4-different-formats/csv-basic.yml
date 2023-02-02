@@ -1,0 +1,40 @@
+---
+integrations:
+  - name: nri-flex
+    interval: 60s
+    config:
+      name: csvdata
+      apis:
+        - name: csvdata
+          event_type: lab4
+          url: https://nr-testdata1.s3.ap-southeast-2.amazonaws.com/csv-sample1.html
+
+          # commands:
+          #   - run: curl -s https://nr-testdata1.s3.ap-southeast-2.amazonaws.com/csv-sample1.html
+          #     output: csv
+
+          # sample_exclude_filter:
+          #   - ENTITY_NAME: ^$
+
+          # timestamp_conversion:
+          #   TIMESTAMP_DERIVED: TIMESTAMP::RFC3339
+
+          # remove_keys:
+          #   - USER_ID
+          #   - URI_ID_DERIVED
+          #   - API_TYPE
+          #   - CLIENT_IP
+          #   - CLIENT_NAME
+          #   - LOGIN_KEY
+
+          # rename_keys:
+          #   LOGIN_KEY: tokenid
+
+          # value_mapper:
+          #   REQUEST_STATUS:
+          #     - (^$)=>healthy
+          #     - (.*)=>bad
+
+          # add_attribute:
+          #   link: https://some-other-service/nodes/${URI}/${ORGANIZATION_ID}
+

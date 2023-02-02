@@ -1,0 +1,21 @@
+---
+integrations:
+  - name: nri-flex
+    interval: 30s
+    config:
+      name: weather
+      variable_store:
+        long: 151.21
+        lat: -33.87
+      custom_attributes:
+        city: Sydney
+        lat: ${var:lat}
+        long: ${var:long}
+      global: 
+        base_url: https://api.open-meteo.com/v1/forecast?
+      apis:
+        - event_type: WeatherLocationExample
+          url: latitude=${var:lat}&longitude=${var:long}&hourly=temperature_2m&hourly=precipitation&hourly=rain&hourly=showers
+          jq: '.hourly | [."time", ."temperature_2m",."precipitation",."rain",."showers"] | transpose | map({timestamp: .[0], temp: .[1], precipitation_mm: .[2], rain_mm: .[3],showers_mm: .[4]})'
+          timestamp_conversion:
+            timestamp: TIMESTAMP::2006-01-02T15:04

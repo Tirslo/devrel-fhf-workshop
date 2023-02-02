@@ -1,0 +1,28 @@
+---
+integrations:
+  - name: nri-flex
+    interval: 30s
+    config:
+      name: mysqlDbFlex
+      secrets:
+        mylogin:
+          kind: local # Use Flex local/internal decryption function
+          key: N3wR3lic! # Your pass_phrase to encrypt/decrypt the login info
+          data: 21998a635470bdeb497da3c35397869d99cc188259c016b5afddfff1f7eff22a2a1666ddffc885d48c1267a02db84a1789654363192cbc7460f25943d8922d
+          type: equal
+          # Run the following command to generate a encrypted login info, paste it to the above -> data
+          # nri-flex -encrypt_pass 'username=<YOUR USERNAME>,password=<YOUR PASSWORD>' -pass_phrase 'N3wR3lic!'
+
+
+      apis:
+        - database: mysql
+          event_type: lab72
+          db_conn: ${secret.mylogin:username}:${secret.mylogin:password}@tcp(ec2-3-26-50-20.ap-southeast-2.compute.amazonaws.com:3306)/usersdb
+          custom_attributes: # applies to all queries
+            weather: sunny
+            LOCATION: sydney
+
+          db_queries:
+            - name: userSample
+              event_type: userSample
+              run: Select * from users;
