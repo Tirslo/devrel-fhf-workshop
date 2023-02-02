@@ -7,4 +7,4 @@ integrations:
       apis:
         - name: toDoSample
           event_type: Lab1Example2
-          url: https://jsonplaceholder.typicode.com/todos
+          url: https://jsonplaceholder.typicode.com/todos/1
