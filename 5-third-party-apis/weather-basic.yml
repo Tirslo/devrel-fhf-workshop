@@ -1,7 +1,7 @@
 ---
 integrations:
   - name: nri-flex
-    interval: 30s
+    interval: 60s
     config:
       name: status
       variable_store:
