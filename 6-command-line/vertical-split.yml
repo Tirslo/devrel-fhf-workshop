@@ -9,7 +9,7 @@ integrations:
           commands:
             - run: curl -s https://nr-testdata1.s3.ap-southeast-2.amazonaws.com/vertical-split-sample1.txt
         
-        #       split_by: "="
+          #     split_by: "="
 
-        #   custom_attributes:
-        #     CLUSERNAME: AEROSPIKE_Cluster1
+          # custom_attributes:
+          #   CLUSERNAME: AEROSPIKE_Cluster1
