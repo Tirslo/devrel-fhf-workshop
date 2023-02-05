@@ -9,7 +9,7 @@ integrations:
           commands:
             - name: google
               run: ping -c 5 google.com || true
-              split_output: statistics ---
+              # split_output: statistics ---
               # regex_matches:
               #   - expression: ([0-9]+\.?[0-9]+)\/([0-9]+\.?[0-9]+)\/([0-9]+\.?[0-9]+)\/([0-9]+\.?[0-9]+)
               #     keys: [min, avg, max, stddev]
