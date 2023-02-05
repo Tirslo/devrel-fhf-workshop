@@ -6,16 +6,16 @@ integrations:
       name: mysqlDbFlex
       apis:
         - database: mysql
-          event_type: Lab7Example1
-          db_conn: root:password@tcp(localhost:3306)/DevRel
+          event_type: lab71
+          db_conn: weaver:weaverpass@tcp(ec2-3-26-50-20.ap-southeast-2.compute.amazonaws.com:3306)/usersdb
           custom_attributes: # applies to all queries
             weather: sunny
             LOCATION: sydney
 
           db_queries:
-            - name: tutorialsSample
-              event_type: tutorialSample
-              run: Select * from public.tutorials
+            - name: userSample
+              event_type: userSample
+              run: Select * from users
 
 #             - name: MySQLShowVars
 #               event_type: msqlvarSample  
