@@ -16,6 +16,6 @@ integrations:
       apis:
         - event_type: WeatherLocationExample
           url: latitude=${var:lat}&longitude=${var:long}&hourly=temperature_2m&hourly=precipitation&hourly=rain&hourly=showers
-          jq: '.hourly | [."time", ."temperature_2m",."precipitation",."rain",."showers"] | transpose | map({timestamp: .[0], temp: .[1], precipitation_mm: .[2], rain_mm: .[3],showers_mm: .[4]})'
-          timestamp_conversion:
-            timestamp: TIMESTAMP::2006-01-02T15:04
+          # jq: '.hourly | [."time", ."temperature_2m",."precipitation",."rain",."showers"] | transpose | map({timestamp: .[0], temp: .[1], precipitation_mm: .[2], rain_mm: .[3],showers_mm: .[4]})'
+          # timestamp_conversion:
+          #   timestamp: TIMESTAMP::2006-01-02T15:04

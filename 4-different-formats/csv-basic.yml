@@ -6,12 +6,10 @@ integrations:
       name: csvdata
       apis:
         - name: csvdata
-          event_type: lab4
-          url: https://nr-testdata1.s3.ap-southeast-2.amazonaws.com/csv-sample1.html
-
-          # commands:
-          #   - run: curl -s https://nr-testdata1.s3.ap-southeast-2.amazonaws.com/csv-sample1.html
-          #     output: csv
+          event_type: Lab4Example3
+          commands:
+            - run: curl -s https://nr-testdata1.s3.ap-southeast-2.amazonaws.com/csv-sample1.html
+              output: csv
 
           # sample_exclude_filter:
           #   - ENTITY_NAME: ^$
@@ -36,5 +34,5 @@ integrations:
           #     - (.*)=>bad
 
           # add_attribute:
-          #   link: https://some-other-service/nodes/${URI}/${ORGANIZATION_ID}
+          #   link: https://futurehack-service/nodes/${URI}/${ORGANIZATION_ID}
 

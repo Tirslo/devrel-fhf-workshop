@@ -3,16 +3,14 @@ integrations:
   - name: nri-flex
     interval: 30s
     config:
-      name: weather
+      name: status
       variable_store:
         long: 151.21
         lat: -33.87
-			custom_attributes:
+      custom_attributes:
         city: Sydney
-      global: 
+      global:
         base_url: https://api.open-meteo.com/v1/forecast?
       apis:
         - event_type: WeatherLocationExample
           url: latitude=${var:lat}&longitude=${var:long}&current_weather=true
-					add_attribute:
-						city: Sydney

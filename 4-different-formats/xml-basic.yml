@@ -6,7 +6,7 @@ integrations:
       name: simpleXML
       apis:
         - name: simpleXML
-          event_type: lab3
+          event_type: Lab4Example1
           url: https://nr-testdata1.s3.ap-southeast-2.amazonaws.com/xml-sample1.xml
 
           # prefix: books-
