@@ -14,7 +14,7 @@ integrations:
           #   TIME: ${timestamp:s}
 
           # add_attribute:
-          #   link: https://some-other-service/nodes/${id}
+          #   link: https://futurehack-service/nodes/${id}
 
           # value_parser:
           #   id: "[0-9]+"
