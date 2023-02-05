@@ -1,0 +1,15 @@
+---
+integrations:
+  - name: nri-flex
+    config:
+      name: aerospike_integration
+      apis:
+        - name: aerospike_cluster_stats
+          event_type: lab62
+          commands:
+            - run: curl -s https://nr-testdata1.s3.ap-southeast-2.amazonaws.com/vertical-split-sample1.txt
+        
+        #       split_by: "="
+
+        #   custom_attributes:
+        #     CLUSERNAME: AEROSPIKE_Cluster1
