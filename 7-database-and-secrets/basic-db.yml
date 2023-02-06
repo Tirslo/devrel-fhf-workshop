@@ -7,11 +7,10 @@ integrations:
       apis:
         - database: mysql
           event_type: lab71
-          db_conn: weaver:weaverpass@tcp(ec2-3-26-50-20.ap-southeast-2.compute.amazonaws.com:3306)/usersdb
+          db_conn: weaver:weaverpass@tcp(ec2-54-206-88-205.ap-southeast-2.compute.amazonaws.com:3306)/usersdb
           custom_attributes: # applies to all queries
             weather: sunny
             LOCATION: sydney
-
           db_queries:
             - name: userSample
               event_type: userSample
