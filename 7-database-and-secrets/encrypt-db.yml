@@ -16,7 +16,7 @@ integrations:
 
       apis:
         - database: mysql
-          event_type: lab72
+          event_type: Lab7Example2
           db_conn: ${secret.mylogin:username}:${secret.mylogin:password}@tcp(ec2-54-206-88-205.ap-southeast-2.compute.amazonaws.com:3306)/usersdb
           custom_attributes: # applies to all queries
             weather: sunny
