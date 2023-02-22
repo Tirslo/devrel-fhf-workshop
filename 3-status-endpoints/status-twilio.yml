@@ -9,8 +9,8 @@ integrations:
       apis:
         - event_type: TwilioStatusSample
           url: /status.json
-          keep_keys:
-            - status
+          # keep_keys:
+          #  - status
           # async: true
   
         # - event_type: TwilioComponentSample
