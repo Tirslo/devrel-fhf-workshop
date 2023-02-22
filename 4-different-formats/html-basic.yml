@@ -9,7 +9,7 @@ integrations:
           event_type: Lab4Example2
           url: https://nr-testdata1.s3.ap-southeast-2.amazonaws.com/html-table-sample1.html
           
-          parse_html: true
+          ## parse_html: true
 
-          sample_include_match_all_filter:
-            - Index: "^1"
+          ## sample_include_match_all_filter:
+          ## - Index: "^1"
