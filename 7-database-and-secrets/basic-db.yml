@@ -11,10 +11,10 @@ integrations:
           custom_attributes: # applies to all queries
             weather: sunny
             LOCATION: sydney
-          db_queries:
-            - name: userSample
-              event_type: userSample
-              run: Select * from users
+          # db_queries:
+           # - name: userSample
+           #   event_type: userSample
+           #   run: Select * from users
 
 #             - name: MySQLShowVars
 #               event_type: msqlvarSample  
